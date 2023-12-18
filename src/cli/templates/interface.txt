@@ -1,0 +1,3 @@
+import { IMongoose } from './mongoose.interface';
+
+export interface I$ extends IMongoose {};

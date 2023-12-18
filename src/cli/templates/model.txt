@@ -1,0 +1,18 @@
+import { I$ } from 'interfaces/%.interface';
+import { Document, Schema, model } from 'mongoose';
+
+const $Schema: Schema = new Schema<I$>(
+  {},
+  {
+    timestamps: true,
+    toJSON: {
+      transform(_, ret) {
+        delete ret.__v;
+
+        return ret;
+      },
+    },
+  },
+);
+
+export const $Model = model<I$ & Document>('$', $Schema);

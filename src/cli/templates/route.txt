@@ -1,0 +1,4 @@
+import { route } from 'utils/route';
+import { %sController } from 'controllers';
+
+export default route([]);

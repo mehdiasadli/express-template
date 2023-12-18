@@ -1,0 +1,3 @@
+import { %sService } from 'services';
+
+export default {};
